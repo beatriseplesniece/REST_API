@@ -1,0 +1,116 @@
+[
+  {
+    "uri": "features/login.feature",
+    "id": "login-feature",
+    "keyword": "Feature",
+    "name": "Login feature",
+    "description": "  Test the functionality of login",
+    "line": 1,
+    "elements": [
+      {
+        "id": "login-feature;log-in---positive",
+        "keyword": "Scenario",
+        "name": "Log in - positive",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have logged in as a regular user",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 244329000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I can access my profile information",
+            "line": 6,
+            "output": [
+              "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJicGxlc25pZWNlQG1tYWlsLmNvbSIsImV4cCI6MTUyOTg2MjM0N30.2DmYzpS6z0OoBvy9900botKvnPv6SI46qeLCXqE8q435-2JBqmNRg43MR62JrYhuysNZEvrilW6QAKa3CfNIYQ"
+            ],
+            "match": {
+              "location": "features/step_definitions/profile_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149832000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-feature;log-in---negative",
+        "keyword": "Scenario",
+        "name": "Log in - negative",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I try to log in using an invalid password",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 234069000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I check if I am not logged in",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 462836000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/sign-up.feature",
+    "id": "sign-up-feature",
+    "keyword": "Feature",
+    "name": "Sign up feature",
+    "description": "  This feature is used to test the sign-up functionality",
+    "line": 1,
+    "elements": [
+      {
+        "id": "sign-up-feature;sign-up-positive",
+        "keyword": "Scenario",
+        "name": "Sign-up positive",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have signed up as a regular user",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/sign-up_steps.rb:1"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Sign up failed!\n  Status code is not correct!\n  Expected : 200\n  Received : 400\n  Response received : {\"timestamp\":\"2018-06-14T17:45:48.592+0000\",\"status\":400,\"error\":\"Bad Request\",\"message\":\"Failed to add user bplesniece@mmail.com !\",\"path\":\"/api/sign-up\"}.\n<200> expected but was\n<400>. (Test::Unit::AssertionFailedError)\n./features/support/assert_helper.rb:2:in `assert_status_code'\n./features/endpoint_functions/sign_up.rb:16:in `sign_up_positive'\n./features/step_definitions/sign-up_steps.rb:2:in `/^I have signed up as a regular user$/'\nfeatures/sign-up.feature:5:in `Given I have signed up as a regular user'",
+              "duration": 140421000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
