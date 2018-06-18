@@ -4,3 +4,8 @@ Feature: Create post feature
   Scenario: Create post - positive
     Given I have logged in as a regular user
     Then I can create post
+
+  Scenario: Update post - positive
+    Given I have logged in as a regular user
+    Then I can create post
+    Then I can update post
